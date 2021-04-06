@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/index.css" th:href="@{/index.css}" rel="stylesheet" >
+    <link rel="shortcut icon" th:href="@{/assets/favicon.ico}" href="../static/assets/favicon.ico" type="image/x-icon">
+
+    <title>Account</title>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="home.html" th:href="@{/}">Home</a>
+        <a href="allproducts.html" th:href="@{allproducts}">Products</a>
+        <a href="about.html" th:href="@{about}">About</a>
+        <a href="contact.html" th:href="@{contact}">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropbtn">Account
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="register" th:href="@{register}">Create Account</a>
+                <a href="login" th:href="@{login}">Login</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="myaccountform">
+        <form th:action="@{/logout}" method="post">
+
+            <input type="submit" value="Log out" />
+        </form>
+
+        <div th:if="${message}" class="alert alert-danger"
+        role="alert" th:text=${message}></div>
+
+    </div>
+    
+
+
+
+    <div class="custnav">
+        <a href="#" onclick="showOrders()">Orders</a>
+        <a href="#" onclick="showAccount()">My Account Details</a>
+    </div>
+
+    <div class="welcome">
+        <span>Hi [name], welcome to your account</span>
+    </div>
+
+    <div id="myorders">
+        <span>Your Orders</span>
+        <div class="allcustorders">
+            <table>
+                <tr>
+                    <th>Order Id</th>
+                    <th>Order Date</th>
+                    <th>Shipping Date</th>
+                    <th>Arrival date</th>
+                    <th>Products</th>
+                </tr>
+                <tr>
+                    <td>dsad</td>
+                    <td>das</td>
+                    <td>dasd</td>
+                    <td>faf</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>product1</td>
+                            </tr>
+                            <tr>
+                                <td>product2</td>
+                            </tr>
+                            <tr>
+                                <td>product3</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="details">
+        <span>Your Account Details</span>
+        <h4>Account Name</h4>
+        <h4>Email</h4>
+        <h4>Phone Number</h4>
+        <h4><a href="#">Change Password</a></h4>
+    </div>
+
+
+    <script type="text/javascript" th:src="@{/index.js}"></script>
+
+</body>
+</html>

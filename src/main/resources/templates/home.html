@@ -1,0 +1,138 @@
+<!-- // Authors: Liplan Lekipising and catherine Muthoni -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/index.css" th:href="@{/index.css}" rel="stylesheet">
+    <link rel="shortcut icon" th:href="@{/assets/favicon.ico}" href="../static/assets/favicon.ico" type="image/x-icon">
+
+    <title>Autoparts</title>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="../static/assets/logo.png" th:src="@{assets/logo.png}" alt="">
+    </div>
+
+    <div class="nav">
+        <a href="home.html" th:href="@{/}">Home</a>
+        <a href="allproducts.html" th:href="@{allproducts}">Products</a>
+        <a href="about.html" th:href="@{about}">About</a>
+        <a href="contact.html" th:href="@{contact}">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropbtn">Account
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="register" th:href="@{register}">Create Account</a>
+                <a href="login" th:href="@{login}">Login</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="welcome">
+        <h2>Welcome to 250 AutoParts Rwanda</h2>
+    </div>
+
+    <!-- slider -->
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="../static/assets/product_pics/Front Brake Pads.jpg"
+                th:src="@{/assets/product_pics/Front Brake Pads.jpg}" style="width:100%">
+            <div class="text">Front Brake Pads</div>
+        </div>
+        <br>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img src="../static/assets/product_pics/Front light right and left.jpeg"
+                th:src="@{/assets/product_pics/Front light right and left.jpeg}" style="width:100%">
+            <div class="text">Front Light Right and Left</div>
+        </div>
+        <br>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="../static/assets/product_pics/Injector Oil Seal.jpeg"
+                th:src="@{/assets/product_pics/Injector Oil Seal.jpeg}" style="width:100%">
+            <div class="text">Injector Oil Seal</div>
+        </div>
+        <br>
+
+    </div> <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="featurecars">
+        <h1>F E A T U R E D &emsp; P R O D U C T S</h1>
+        <div class="feturedimage">
+            <div class="firstrow">
+                <div class="colborder1">
+                    <div class="costumrow">
+                        <div class="img1">
+                            <img src="../static/assets/product_pics/Tail gate shock absorber.jpeg"
+                                th:src="@{/assets/product_pics/Tail gate shock absorber.jpeg}" alt="porsche">
+                        </div>
+                        <div class="txt1">
+                            <div class="featurecontant">
+                                <h1>Motor Pump</h1>
+                                <p> High Quality pump for various uses</p>
+                                <h2>Price 12000 Rwf</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="colborder2">
+                    <div class="costumrow">
+                        <div class="img2">
+                            <img src="../static/assets/product_pics/Hydraulic Pump.jpeg"
+                                th:src="@{/assets/product_pics/Hydraulic Pump.jpeg}" alt="porsche1">
+                        </div>
+                        <div class="txt1">
+                            <div class="featurecontant">
+                                <h1>Brake System</h1>
+                                <p>Black durable brake Hydraulic system for automobiles</p>
+                                <h2>Price 123100 Rwf</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="bottomnav">
+            <p>Navigate</p>
+            <a href="">Shop</a>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+        </div>
+
+        <div class="social">
+            <p>Visit us on social media</p>
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+            <a href="">Instagram</a>
+        </div>
+
+    </footer>
+
+
+
+    <script type="text/javascript" th:src="@{/index.js}"></script>
+</body>
+
+</html>

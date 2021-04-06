@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../static/index.css" th:href="@{/index.css}" rel="stylesheet">
+  <link rel="shortcut icon" th:href="@{/assets/favicon.ico}" href="../static/assets/favicon.ico" type="image/x-icon">
+  <title>Sign In</title>
+</head>
+
+<body>
+
+  <div class="nav">
+    <a href="home.html" th:href="@{/}">Home</a>
+    <a href="allproducts.html" th:href="@{allproducts}">Products</a>
+    <a href="about.html" th:href="@{about}">About</a>
+    <a href="contact.html" th:href="@{contact}">Contact Us</a>
+    <div class="dropdown">
+      <button class="dropbtn">Account
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="accounts" th:href="@{register}">Create Account</a>
+        <a href="accounts" th:href="@{login}">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <h1>Login to your Account</h1>
+
+  <form name="f" th:action="@{/login}" method="post">
+    <fieldset>
+      <legend>Please Login</legend>
+      <div th:if="${param.error}" class="alert alert-error">
+        Invalid username and password.
+      </div>
+      <div th:if="${param.logout}" class="alert alert-success">
+        You have been logged out.
+      </div>
+      <label for="username">Username</label> <br>
+      <input type="text" id="username" name="username" /> <br>
+      <label for="password">Password</label> <br>
+      <input type="password" id="password" name="password" /> <br>
+      <div class="form-actions">
+        <button type="submit" class="btn">Log in</button>
+      </div>
+    </fieldset>
+  </form>
+
+  </div>
+</body>
+
+</html>

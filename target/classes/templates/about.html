@@ -1,0 +1,73 @@
+<!-- // Authors: Liplan Lekipising and catherine Muthoni -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/index.css" th:href="@{/index.css}" rel="stylesheet">
+    <link rel="shortcut icon" th:href="@{/assets/favicon.ico}" href="../static/assets/favicon.ico" type="image/x-icon">
+
+    <title>About</title>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="../static/assets/logo.png" th:src="@{assets/logo.png}" alt="">
+    </div>
+
+    <div class="nav">
+        <a href="home.html" th:href="@{/}">Home</a>
+        <a href="allproducts.html" th:href="@{allproducts}">Products</a>
+        <a href="about.html" th:href="@{about}">About</a>
+        <a href="contact.html" th:href="@{contact}">Contact Us</a>
+        <div class="dropdown">
+          <button class="dropbtn">Account 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="register" th:href="@{register}">Create Account</a>
+            <a href="login" th:href="@{login}">Login</a>
+          </div>
+        </div> 
+      </div>
+    <div class="about">
+        <p>
+            We provides automotive accessories, electronics, <br>
+             and auto parts for owners of autos, SUVs, Vans and <br>
+            motorcycles in all parts of Kigali. <br>
+            <br>
+            services consist of:
+            <ul>
+                <li>Car audio systems</li>
+                <li>Autos, SUVs, Vans, trucks and motorcycles accessories</li>
+                <li>Classic car parts</li>
+            </ul>
+                
+                
+                
+
+
+        </p>
+    </div>
+
+    <footer class="footer">
+        <div class="bottomnav">
+            <p>Navigate</p>
+            <a href="">Shop</a>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+        </div>
+
+        <div class="social">
+            <p>Visit us on social media</p>
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+            <a href="">Instagram</a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

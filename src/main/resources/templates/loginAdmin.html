@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/index.css" th:href="@{/index.css}" rel="stylesheet" >
+    <link rel="shortcut icon" th:href="@{/assets/favicon.ico}" href="../static/assets/favicon.ico" type="image/x-icon">
+
+    <title>Admin Page</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="form">
+          <label for="uname"><b>Username</b></label> <br>
+          <input type="text" placeholder="Enter Username ..." name="uname" required> <br>
+      
+          <label for="psw"><b>Password</b></label>  <br>
+          <input type="password" placeholder="Enter Password ..." name="psw" required> <br> <br>
+      
+          <button type="submit">Login</button> <br> <br>
+        </div>
+      
+        <div class="adminlogin">
+          <span class="psw">Forgot <a href="#">password?</a></span> <br> <br>
+          <span class="create"> <a href="#">Create an account</a> </span> <br>
+        </div>
+      </form> 
+</body>
+</html>
